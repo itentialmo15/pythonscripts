@@ -1,6 +1,11 @@
-def echo_input():
-    user_input = input("Enter some text: ")
-    print("You entered:", user_input)
+#!/usr/bin/env python3
+import sys
 
 if __name__ == "__main__":
-    echo_input()
+    if len(sys.argv) < 2:
+        print("Usage: python echo.py <text>")
+        sys.exit(1)
+
+    text = " ".join(sys.argv[1:])
+    print(text)
+
